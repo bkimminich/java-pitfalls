@@ -6,7 +6,7 @@ public class NumberConverter {
         return Long.valueOf(number).longValue();
     }
 
-    public long toInt(String number) {
+    public int toInt(String number) {
         return Integer.valueOf(number).intValue();
     }
 
