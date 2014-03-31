@@ -1,9 +1,7 @@
 package de.kimminich.pitfalls;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
-import java.util.IllegalFormatPrecisionException;
 import java.util.logging.Logger;
 
 public class PrettyExceptionPrinterTest {

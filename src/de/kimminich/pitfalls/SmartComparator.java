@@ -19,6 +19,10 @@ public class SmartComparator implements Comparator<SmartComparator.ValueObject> 
     public static final class ValueObject implements Comparable<ValueObject> {
         private Integer value;
 
+        public ValueObject(Integer value) {
+            this.value = value;
+        }
+
         public Integer getValue() {
             return value;
         }
@@ -30,6 +34,13 @@ public class SmartComparator implements Comparator<SmartComparator.ValueObject> 
         @Override
         public int compareTo(ValueObject o) {
             return value.compareTo(o.getValue());
+        }
+
+        @Override
+        public String toString() {
+            return "ValueObject{" +
+                    "value=" + value +
+                    '}';
         }
     }
 
