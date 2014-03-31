@@ -7,7 +7,11 @@ public class PrettyExceptionPrinter {
     public void prettyPrint(Throwable t, Logger logger) {
         String className = t.getClass().getName();
         String message = t.getMessage();
-        logger.severe("A" + (className.matches("AEIOU.*") ? "n " : " ") + className + " has occurred: " + message != null ? message : "No message");
+        logger.severe(indefiniteArticleFor(className) + className + " has occurred: " + message != null ? message : "No message");
+    }
+
+    private String indefiniteArticleFor(String className) {
+        return "A" + (className.matches("[AEIOU].*") ? "n " : " ");
     }
 
 }
