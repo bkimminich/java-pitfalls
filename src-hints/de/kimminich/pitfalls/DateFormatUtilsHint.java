@@ -10,10 +10,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class DateFormatUtilsTest {
+public class DateFormatUtilsHint {
 
     @Test
-    public void testMultiThreadedDateParsing() throws Exception {
+    public void multiThreadedDateParsing() throws Exception {
         Callable<Date> task = new Callable<Date>() {
             DateFormatUtils dateFormatUtils = new DateFormatUtils();
 

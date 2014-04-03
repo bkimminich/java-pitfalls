@@ -10,13 +10,13 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.util.*;
 
-public class SmartComparatorTest {
+public class SmartComparatorHint {
 
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();
 
     @Test
-    public void testDefaultSortOrder() {
+    public void defaultSortOrder() {
         List<SmartComparator.ValueObject> valueObjects = new ArrayList<>();
         valueObjects.add(new SmartComparator.ValueObject(2));
         valueObjects.add(new SmartComparator.ValueObject(1));
@@ -28,7 +28,7 @@ public class SmartComparatorTest {
     }
 
     @Test
-    public void testReversedSortOrder() {
+    public void reversedSortOrder() {
         List<SmartComparator.ValueObject> valueObjects = new ArrayList<>();
         valueObjects.add(new SmartComparator.ValueObject(2));
         valueObjects.add(new SmartComparator.ValueObject(1));
@@ -40,7 +40,7 @@ public class SmartComparatorTest {
     }
 
     @Test
-    public void testValueObjectsWithSameValueInSet() {
+    public void valueObjectsWithSameValueInSet() {
         Set<SmartComparator.ValueObject> valueObjects = new HashSet<>();
         valueObjects.add(new SmartComparator.ValueObject(1));
         valueObjects.add(new SmartComparator.ValueObject(2));
@@ -51,7 +51,7 @@ public class SmartComparatorTest {
     }
 
     @Test
-    public void testSerialization() throws Exception {
+    public void serialization() throws Exception {
         Map<SmartComparator.ValueObject, String> valueObjects = new TreeMap<>(new SmartComparator(false));
         valueObjects.put(new SmartComparator.ValueObject(1), "One");
         valueObjects.put(new SmartComparator.ValueObject(2), "Two");

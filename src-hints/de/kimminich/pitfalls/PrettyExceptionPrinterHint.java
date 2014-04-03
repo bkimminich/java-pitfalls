@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import java.util.logging.Logger;
 
-public class PrettyExceptionPrinterTest {
+public class PrettyExceptionPrinterHint {
 
     @Test
-    public void testPrintPrettyExceptions() {
+    public void printPretty() {
         PrettyExceptionPrinter printer = new PrettyExceptionPrinter();
         Logger logger = Logger.getAnonymousLogger();
 

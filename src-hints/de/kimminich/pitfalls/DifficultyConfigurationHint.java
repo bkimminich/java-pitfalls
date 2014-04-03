@@ -2,30 +2,30 @@ package de.kimminich.pitfalls;
 
 import org.junit.Test;
 
-public class DifficultyConfigurationTest {
+public class DifficultyConfigurationHint {
 
     DifficultyConfiguration config;
 
     @Test
-    public void testEasy() {
+    public void easy() {
         config = new DifficultyConfiguration(DifficultyConfiguration.Difficulty.EASY);
         System.out.println(config);
     }
 
     @Test
-    public void testNormal() {
+    public void normal() {
         config = new DifficultyConfiguration(DifficultyConfiguration.Difficulty.NORMAL);
         System.out.println(config);
     }
 
     @Test
-    public void testHard() {
+    public void hard() {
         config = new DifficultyConfiguration(DifficultyConfiguration.Difficulty.HARD);
         System.out.println(config);
     }
 
     @Test
-    public void testExtreme() {
+    public void extreme() {
         config = new DifficultyConfiguration(DifficultyConfiguration.Difficulty.EXTREME);
         System.out.println(config);
     }
