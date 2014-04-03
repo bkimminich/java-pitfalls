@@ -8,7 +8,7 @@ public class PrettyExceptionPrinter {
         String className = t.getClass().getName();
         String message = t.getMessage();
         logger.severe(indefiniteArticleFor(className) + " " + className + " has occurred: " +
-                        message != null ? message : "No message");
+                message != null ? message : "No message");
     }
 
     private String indefiniteArticleFor(String className) {
