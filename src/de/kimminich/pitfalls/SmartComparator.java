@@ -1,8 +1,10 @@
 package de.kimminich.pitfalls;
 
+import de.kimminich.ValueObject;
+
 import java.util.Comparator;
 
-public class SmartComparator implements Comparator<SmartComparator.ValueObject> {
+public class SmartComparator implements Comparator<ValueObject> {
 
     private boolean reverseOrder = false;
 
@@ -14,34 +16,6 @@ public class SmartComparator implements Comparator<SmartComparator.ValueObject> 
     public int compare(ValueObject o1, ValueObject o2) {
         int result = o1.compareTo(o2);
         return reverseOrder ? -result : result;
-    }
-
-    public static final class ValueObject implements Comparable<ValueObject> {
-        private Integer value;
-
-        public ValueObject(Integer value) {
-            this.value = value;
-        }
-
-        public Integer getValue() {
-            return value;
-        }
-
-        public void setValue(Integer value) {
-            this.value = value;
-        }
-
-        @Override
-        public int compareTo(ValueObject o) {
-            return value.compareTo(o.getValue());
-        }
-
-        @Override
-        public String toString() {
-            return "ValueObject{" +
-                    "value=" + value +
-                    '}';
-        }
     }
 
 }

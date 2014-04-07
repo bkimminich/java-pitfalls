@@ -1,5 +1,6 @@
 package de.kimminich.pitfalls;
 
+import de.kimminich.ValueObject;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -17,10 +18,10 @@ public class SmartComparatorHint {
 
     @Test
     public void defaultSortOrder() {
-        List<SmartComparator.ValueObject> valueObjects = new ArrayList<>();
-        valueObjects.add(new SmartComparator.ValueObject(2));
-        valueObjects.add(new SmartComparator.ValueObject(1));
-        valueObjects.add(new SmartComparator.ValueObject(3));
+        List<ValueObject> valueObjects = new ArrayList<>();
+        valueObjects.add(new ValueObject(2));
+        valueObjects.add(new ValueObject(1));
+        valueObjects.add(new ValueObject(3));
 
         Collections.sort(valueObjects, new SmartComparator(false));
 
@@ -29,10 +30,10 @@ public class SmartComparatorHint {
 
     @Test
     public void reversedSortOrder() {
-        List<SmartComparator.ValueObject> valueObjects = new ArrayList<>();
-        valueObjects.add(new SmartComparator.ValueObject(2));
-        valueObjects.add(new SmartComparator.ValueObject(1));
-        valueObjects.add(new SmartComparator.ValueObject(3));
+        List<ValueObject> valueObjects = new ArrayList<>();
+        valueObjects.add(new ValueObject(2));
+        valueObjects.add(new ValueObject(1));
+        valueObjects.add(new ValueObject(3));
 
         Collections.sort(valueObjects, new SmartComparator(true));
 
@@ -41,20 +42,20 @@ public class SmartComparatorHint {
 
     @Test
     public void valueObjectsWithSameValueInSet() {
-        Set<SmartComparator.ValueObject> valueObjects = new HashSet<>();
-        valueObjects.add(new SmartComparator.ValueObject(1));
-        valueObjects.add(new SmartComparator.ValueObject(2));
-        valueObjects.add(new SmartComparator.ValueObject(3));
-        valueObjects.add(new SmartComparator.ValueObject(3));
+        Set<ValueObject> valueObjects = new HashSet<>();
+        valueObjects.add(new ValueObject(1));
+        valueObjects.add(new ValueObject(2));
+        valueObjects.add(new ValueObject(3));
+        valueObjects.add(new ValueObject(3));
 
         System.out.println("ValueObjects in HashSet: " + valueObjects);
     }
 
     @Test
     public void serialization() throws Exception {
-        Map<SmartComparator.ValueObject, String> valueObjects = new TreeMap<>(new SmartComparator(false));
-        valueObjects.put(new SmartComparator.ValueObject(1), "One");
-        valueObjects.put(new SmartComparator.ValueObject(2), "Two");
+        Map<ValueObject, String> valueObjects = new TreeMap<>(new SmartComparator(false));
+        valueObjects.put(new ValueObject(1), "One");
+        valueObjects.put(new ValueObject(2), "Two");
 
         File file = temporaryFolder.newFile();
 
