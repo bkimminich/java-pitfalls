@@ -2,7 +2,7 @@ package de.kimminich.pitfalls;
 
 import de.kimminich.ValueObject;
 
-public class NotSoNullSafeUtils {
+public class NullSafeUtils {
 
     public static boolean nullSafeEquals(ValueObject o1, ValueObject o2) {
         return (o1 == null && o2 == null) || o1.equals(o2);
