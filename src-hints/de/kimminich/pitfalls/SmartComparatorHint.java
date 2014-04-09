@@ -1,6 +1,5 @@
 package de.kimminich.pitfalls;
 
-import de.kimminich.ValueObject;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;

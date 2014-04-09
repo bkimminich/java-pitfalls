@@ -1,7 +1,5 @@
 package de.kimminich.pitfalls;
 
-import de.kimminich.ValueObject;
-
 import java.util.Comparator;
 
 public class SmartComparator implements Comparator<ValueObject> {

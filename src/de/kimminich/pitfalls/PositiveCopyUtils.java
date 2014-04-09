@@ -1,7 +1,5 @@
 package de.kimminich.pitfalls;
 
-import de.kimminich.ValueObject;
-
 public class PositiveCopyUtils {
 
     public ValueObject copy(ValueObject original) {

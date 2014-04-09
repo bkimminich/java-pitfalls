@@ -1,7 +1,5 @@
 package de.kimminich.pitfalls;
 
-import de.kimminich.ValueObject;
-
 public class NullSafeUtils {
 
     public static boolean nullSafeEquals(ValueObject o1, ValueObject o2) {

@@ -1,4 +1,4 @@
-package de.kimminich;
+package de.kimminich.pitfalls;
 
 public final class ValueObject implements Comparable<ValueObject> {
     private Integer value;
