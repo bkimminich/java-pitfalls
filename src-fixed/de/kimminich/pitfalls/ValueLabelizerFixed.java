@@ -7,11 +7,7 @@ public class ValueLabelizerFixed {
     private static final Labelizer<ValueObject> instance = new Labelizer<ValueObject>() {
         @Override
         public String labelize(ValueObject o) {
-            return o != null ? o.getValue().toString() : ""; // Handle case that
-                                                             // object is
-                                                             // declared
-                                                             // @Nullable in
-                                                             // interface method
+            return o != null ? o.getValue().toString() : ""; // Handle case that object is declared @Nullable in interface method
         }
     };
 
