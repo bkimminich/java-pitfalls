@@ -4,14 +4,14 @@ import javax.annotation.Nullable;
 
 public class ValueLabelizerFixed {
 
-    private static final Labelizer<ValueObject> instance = new Labelizer<ValueObject>() {
+    private static final Labelizer<ValueObjectFixed> instance = new Labelizer<ValueObjectFixed>() {
         @Override
-        public String labelize(ValueObject o) {
+        public String labelize(ValueObjectFixed o) {
             return o != null ? o.getValue().toString() : ""; // Handle case that object is declared @Nullable in interface method
         }
     };
 
-    public static String labelize(ValueObject o) {
+    public static String labelize(ValueObjectFixed o) {
         return instance.labelize(o);
     }
 
