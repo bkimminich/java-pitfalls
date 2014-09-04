@@ -20,4 +20,5 @@ Enjoy!
 
 Image: http://reusdesigns.deviantart.com/art/Pitfall-Atari-2600-1982-106033303
 
+[![Build Status](https://travis-ci.org/bkimminich/java-pitfalls.svg?branch=master)](https://travis-ci.org/bkimminich/java-pitfalls)
 [![endorse](https://api.coderwall.com/bkimminich/endorsecount.png)](https://coderwall.com/bkimminich)
