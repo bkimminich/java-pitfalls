@@ -6,9 +6,13 @@ public class ValueLabelizerHint {
 
     @Test
     public void labelize() {
-        System.out.println(ValueLabelizer.labelize(new ValueObject()));
-        System.out.println(ValueLabelizer.labelize(new ValueObject(1)));
-        System.out.println(ValueLabelizer.labelize(new ValueObject(2)));
+        try {
+            System.out.println(ValueLabelizer.labelize(new ValueObject()));
+            System.out.println(ValueLabelizer.labelize(new ValueObject(1)));
+            System.out.println(ValueLabelizer.labelize(new ValueObject(2)));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
