@@ -27,3 +27,7 @@ RemoteSystemsTempFiles/
 .cproject
 .buildpath
 *.userlibraries
+
+# Gradle
+build/
+.gradle/
