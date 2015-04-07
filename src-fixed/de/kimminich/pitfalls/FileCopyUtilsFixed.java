@@ -1,12 +1,17 @@
 package de.kimminich.pitfalls;
 
-import java.io.*;
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Helper class for copying files with a JDK version <1.7
  */
 public class FileCopyUtilsFixed {
 
+    @edu.umd.cs.findbugs.annotations.SuppressWarnings({ "OBL_UNSATISFIED_OBLIGATION" })
     public static void copy(File from, File to) {
         try {
             copy(new FileInputStream(from), new FileOutputStream(to));
