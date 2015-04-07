@@ -21,6 +21,7 @@ public class ValueDaoFixed {
     }
 
     // Using String concatenation to create SQL queries introduces SQL Injection vulnerability. Always use PreparedStatement!
+    @edu.umd.cs.findbugs.annotations.SuppressWarnings({ "OBL_UNSATISFIED_OBLIGATION" })
     private PreparedStatement prepareStatement(Connection conn, String name) throws SQLException {
         String sql = "SELECT value FROM data WHERE name = ? AND access_level > 2";
         PreparedStatement ps = conn.prepareStatement(sql);
